@@ -13,4 +13,17 @@ echo 'You deleted C:\\*.*?';
 
 //You deleted C:\*.*?
 echo 'You deleted C:\*.*?';
+
+//This will not expand: \n a newline
+echo 'This will not expand: \n a newline'
+
+/*This will expand:  
+\n a newline */
+echo "This will expand: \n a newline"
+
+//Variables do not $expand $either
+echo 'Variables do not $expand $either'
+
+//Variables do $expand 
+echo "Variables do not $expand"
 ?>
