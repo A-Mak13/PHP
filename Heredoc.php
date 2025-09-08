@@ -13,3 +13,4 @@ echo <<<END
      b
     c
     END;
+?>
