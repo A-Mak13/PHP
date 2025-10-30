@@ -1,0 +1,27 @@
+*{
+    font-family: tahoma;
+}
+header{
+    background-color: #516957;
+    color: white;
+    text-align: center;
+    height: 150px;
+}
+.pierwszy{
+    width: 70%;
+    float: left;
+}
+.drugi{
+    width: 30%;
+    float: left;
+}
+main{
+    background-color: #e1e1e1;
+    height: 450px;
+}
+.lewy, .prawy{
+    width: 25%;
+}
+.srodkowy{
+    width: 50%;
+}
