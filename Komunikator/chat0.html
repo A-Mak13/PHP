@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chat</title>
+</head>
+<body>
+    <main>
+        <section id="chat">
+            <div class="jolanta">
+                <img src="Jolka.jpg" alt="Jolanta Nowak">
+                <p>czesc idziesz jutro do kina</p>
+            </div>
+            <div class="krzysztof">
+                <img src="Krzysiek.jpg" alt="krzysztof Łukasiński">
+                <p>ta, a ty?</p>
+            </div>
+        </section>
+        <section class="inputArea">
+            <form>
+                <label for="messageinput">Wypisz wiadomosc:</label>
+                <input type="text" id="messageinput">
+                <button type="button" onclick="sendmessage()">wyslij</button><br>
+                <button type="button" onclick="generaterandomreply()">generuj wiadomosc</button>
+                <p id></p>
+            </form>
+        </section>
+    </main>
+    <script>
+        function sendmessage(){
+            let wiadomosc=document.getElementById('messageinput');
+            let chat=document.getElementById('chat');
+            let nowa_odpowiedz=document.createElement('div');
+            nowa_odpowiedz.add('jolanta');
+            let zdjecia_jolanty=document.createElement('img');
+            zdjecia_jolanty.src='jolka.jpg';
+            zdjecia_jolanty.alt='jolanta nowak';
+            let jolantap = document.createElement('p');
+            jolantap.textContent =wiadomosc.value;
+            nowa_odpowiedz.appendChild(jolka.img);
+            nowa_odpowiedz.appendChild(jolantap);
+            chat.appendChild(nowa_odpowiedz);
+            wiadomosc.value='';
+        }
+
+        function generaterandomreply() {
+            let randomIndex = Math.floor(Math.random() * odpowiedzi.length);
+            let randomResponse = odpowiedzi[randomIndex];
+            let chat = document.getElementById('chat');
+            let krzysiekodpwiedz = document.createElement('div');
+            krzysiekodpwiedz.classList.add('krzysiek');
+
+            let krzysiekzdjecie = document.createElement('img');
+            krzysiekzdjecie.src = 'Krzysiek.jpg';
+            krzysiekzdjecie.alt = 'Krzysztof Łukasiński';
+
+            let krzysiekp = document.createElement('p');
+            krzysiekp.textContent = randomResponse;
+
+            krzysiekDiv.appendChild(krzysiekzdjecie);
+            krzysiekDiv.appendChild(krzysiekp);
+            chat.appendChild(krzysiekodpwiedz);
+        }
+
+        let odpowiedzi = [
+            "Świetnie!",
+            "Kto gra główną rolę?",
+            "Lubisz filmy Tego reżysera?",
+            "Będę 10 minut wcześniej",
+            "Może kupimy sobie popcorn?",
+            "Ja wolę Colę",
+            "Zaproszę jeszcze Grześka",
+            "Tydzień temu też byłem w kinie na Diunie",
+            "Ja funduję bilety"
+        ];
+
+    </script>
+</body>
+</html>
