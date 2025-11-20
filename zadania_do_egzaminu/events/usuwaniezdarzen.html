@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #test{
+            background-color: coral;
+            border: solid 1px;
+            padding: 50px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h3>removeEvenListener()- usuwa obsługe zdarzenia</h3>
+    <div id="test">to jest div
+        <p id="demo">kliknij w przycisk aby usunac zdarzenie</p>
+        <button onclick="removeEvent()">usun zdarzenie</button>
+    </div>
+    <script>
+        document.querySelector("#test").addEventListener("mousemove", myFunction);
+        function myFunction(){
+            document.querySelector("#demo").innerHTML=Math.random();
+            
+        }
+        function removeEvent(){
+            document.querySelector("#test").removeEventListener("mousemove", myFunction);
+        }
+    </script>
+</body>
+</html>
