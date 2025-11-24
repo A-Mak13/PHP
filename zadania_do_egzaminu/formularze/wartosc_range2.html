@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label>
+            <input type="range" name="rangeInput" min="0" max="100" id="zakres">
+            <input type="number" id="numberin">
+        </label>
+    </form>
+    <script>
+        let z=document.querySelector("#numberin");
+        z.addEventListener("change", wybierz);
+        function wybierz(){
+            document.querySelector("#zakres").innerHTML=z.value
+        }
+    </script>
+</body>
+</html>
