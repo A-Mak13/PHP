@@ -14,8 +14,8 @@
     </form>
     <script>
         let z=document.querySelector("#numberin");
-        z.addEventListener("change", wybierz);
-        function wybierz(){
+        z.addEventListener("focus", zatwierdz);
+        function zatwierdz(){
             document.querySelector("#zakres").innerHTML=z.value
         }
     </script>

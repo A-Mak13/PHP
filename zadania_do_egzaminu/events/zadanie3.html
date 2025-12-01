@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .border{
+            border: 1px solid red;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>kliknij aby dodac swoje imie</h1>
+    <button class="" onclick="Myfunction()">generuj</button>
+    <script>
+        function Myfunction(){
+            let zadanie=document.createElement("p");
+            zadanie.textContent= "Mak Angelika Zadanie z wpisaniem";
+            document.body.appendChild(zadanie);
+            zadanie.setAttribute("class","border")
+        }
+    </script>
+</body>
+</html>
